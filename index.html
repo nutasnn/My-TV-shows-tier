@@ -6,44 +6,93 @@
     <title>My TV Show Tier List</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background: linear-gradient(135deg, #1d1f20, #333);
+            color: #ffffff;
         }
+
         h1 {
             margin-top: 50px;
+            font-size: 2.5em;
+            color: #ffdd57;
         }
+
         .tier-list {
             display: inline-block;
             text-align: left;
             margin-top: 20px;
+            width: 80%;
         }
+
         .tier {
-            padding: 10px;
-            background-color: #ddd;
-            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .tier h2 {
+            font-size: 1.8em;
             margin-bottom: 10px;
         }
+
         .tier img {
-            width: 200px;
+            max-width: 150px;
             margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
         }
-         .Epic {
-            background-color: #ffddcc; /* Light Coral */
+
+        .tier img:hover {
+            transform: scale(1.05);
         }
+
+        .Epic {
+            background-color: #ff6f61;
+        }
+
         .Amazing {
-            background-color: #ccffcc; /* Light Green */
+            background-color: #6dc5a3;
         }
+
         .Ok {
-            background-color: #ccccff; /* Light Blue */
+            background-color: #61a1ff;
         }
+
         .Meh {
-            background-color: #ffffcc; /* Light Yellow */
+            background-color: #ffb961;
         }
+
         .Trash {
-            background-color: #fffecc; /* Light Yellow */
+            background-color: #a1a1a1;
+        }
+
+        .review-box {
+            display: none;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .tier img:hover + .review-box,
+        .review-box:hover {
+            display: block;
+        }
+
+        .review-text {
+            font-size: 1em;
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -53,30 +102,28 @@
         <div class="tier Epic">
             <h2>Epic</h2>
             <img src="https://m.media-amazon.com/images/M/MV5BNWNmYzQ1ZWUtYTQ3ZS00Y2UwLTlkMDctZThlOTJkMGJiNzBiXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_FMjpg_UX1000_.jpg" alt="Mindhunter (2017)">
+            <div class="review-box">
+                <p class="review-text">Mindhunter is an intense, cerebral drama that dives deep into the psychology of criminal profiling. A must-watch for true crime enthusiasts!</p>
+            </div>
             <img src="https://m.media-amazon.com/images/M/MV5BODY5YjA3ZDgtM2EwYy00ZGVmLWFhNWItMTMxMWRkMWFiOTlkXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_FMjpg_UX1000_.jpg" alt="Succession (2018)">
+            <div class="review-box">
+                <p class="review-text">Succession is a sharp, biting satire of wealth and power, with complex characters and gripping storytelling. A modern-day masterpiece.</p>
+            </div>
         </div>
+
         <div class="tier Amazing">
             <h2>Amazing</h2>
             <img src="https://m.media-amazon.com/images/M/MV5BMTExNzk2NjcxNTNeQTJeQWpwZ15BbWU4MDcxOTczOTIx._V1_FMjpg_UX1000_.jpg" alt="Twin Peaks (1990)">
+            <div class="review-box">
+                <p class="review-text">Twin Peaks is a surreal, genre-defying series that blends mystery, horror, and the supernatural. It's a cult classic that redefined TV storytelling.</p>
+            </div>
             <img src="https://m.media-amazon.com/images/M/MV5BYzQxZWU5ZGYtZjQzMy00YTk5LWE1YTgtNjkwNjI5ZGNmMDIyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg" alt="The Bear (2022)">
+            <div class="review-box">
+                <p class="review-text">The Bear is a fresh, intense drama that explores the world of high-pressure kitchens with a raw, unfiltered look at the lives of its characters.</p>
+            </div>
         </div>
-         <div class="tier Ok">
-            <h2>Ok</h2>
-            <img src="https://m.media-amazon.com/images/M/MV5BMTExNzk2NjcxNTNeQTJeQWpwZ15BbWU4MDcxOTczOTIx._V1_FMjpg_UX1000_.jpg" alt="Twin Peaks (1990)">
-            <img src="https://m.media-amazon.com/images/M/MV5BYzQxZWU5ZGYtZjQzMy00YTk5LWE1YTgtNjkwNjI5ZGNmMDIyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg" alt="The Bear (2022)">
-        </div>
-         <div class="tier Meh">
-            <h2>Meh :/</h2>
-            <img src="https://m.media-amazon.com/images/M/MV5BMTExNzk2NjcxNTNeQTJeQWpwZ15BbWU4MDcxOTczOTIx._V1_FMjpg_UX1000_.jpg" alt="Twin Peaks (1990)">
-            <img src="https://m.media-amazon.com/images/M/MV5BYzQxZWU5ZGYtZjQzMy00YTk5LWE1YTgtNjkwNjI5ZGNmMDIyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg" alt="The Bear (2022)">
-        </div>
-         <div class="tier Trash">
-            <h2>Trash</h2>
-            <img src="https://m.media-amazon.com/images/M/MV5BMTExNzk2NjcxNTNeQTJeQWpwZ15BbWU4MDcxOTczOTIx._V1_FMjpg_UX1000_.jpg" alt="Twin Peaks (1990)">
-            <img src="https://m.media-amazon.com/images/M/MV5BYzQxZWU5ZGYtZjQzMy00YTk5LWE1YTgtNjkwNjI5ZGNmMDIyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg" alt="The Bear (2022)">
-        </div>
+
+        <!-- Add more tiers as needed -->
     </div>
 </body>
 </html>
-
-
