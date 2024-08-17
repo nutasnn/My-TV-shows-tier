@@ -15,8 +15,8 @@
         }
 
         h1 {
-            margin-top: 5px;
-            font-size: 2.5em;
+            margin-top: 2px;
+            font-size: 1.5em;
             color: #ffdd57;
         }
 
@@ -30,7 +30,7 @@
        .tier {
     padding: 10px;
     border-radius: 5px;
-    margin-bottom: 10px; /* Increase margin-bottom for more separation between tiers */
+    margin-bottom: 5px; /* Increase margin-bottom for more separation between tiers */
     background-color: #ffffff; /* Add a white background for better contrast */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
     position: relative;
@@ -38,7 +38,7 @@
 
 
         .tier h2 {
-            font-size: 1.8em;
+            font-size: 1.5em;
             margin-bottom: 5px;
         }
 
@@ -105,10 +105,11 @@
             border-radius: 8px;
             max-width: 400px;
             text-align: left;
+            z-index: 10;
         }
 
         .tier img:hover + .review-box,
-        .review-box:hover {
+        .tier img:focus + .review-box {
             display: block;
         }
 
@@ -116,6 +117,12 @@
             font-size: 1em;
             line-height: 1.5;
         }
+        .show-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        
     </style>
 </head>
 <body>
@@ -125,29 +132,45 @@
             <h2>Epic</h2>
             <img src="https://m.media-amazon.com/images/M/MV5BNWNmYzQ1ZWUtYTQ3ZS00Y2UwLTlkMDctZThlOTJkMGJiNzBiXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_FMjpg_UX1000_.jpg" alt="Mindhunter (2017)">
             <div class="review-box">
+                <p class="show-title">Mindhunter (2017)</p>
                 <p class="review-text">Mindhunter is an intense, cerebral drama that dives deep into the psychology of criminal profiling. A must-watch for true crime enthusiasts!</p>
             </div>
             <img src="https://m.media-amazon.com/images/M/MV5BODY5YjA3ZDgtM2EwYy00ZGVmLWFhNWItMTMxMWRkMWFiOTlkXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_FMjpg_UX1000_.jpg" alt="Succession (2018)">
             <div class="review-box">
+                <p class="show-title">Succession (2018)</p>
                 <p class="review-text">Succession is a sharp, biting satire of wealth and power, with complex characters and gripping storytelling. A modern-day masterpiece.</p>
             </div>
             <img src="https://www.themoviedb.org/t/p/w1280/7DJKHzAi83BmQrWLrYYOqcoKfhR.jpg" alt="The Office (2005)">
+            <div class="review-box">
+                <p class="show-title">The Office (2005)</p>
+                <p class="review-text">A mockumentary sitcom that depicts the everyday lives of office employees, known for its dry humor and relatable characters.</p>
+            </div>
 <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fC2HDm5t0kHl7mTm7jxMR31b7by.jpg" alt="Better Call Saul (2015)">
+            <div class="review-box">
+                <p class="show-title">Better Call Saul (2015)</p>
+                <p class="review-text">A Greater Prequel from Breaking bad</p>
+            </div>
 <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hTP1DtLGFamjfu8WqjnuQdP1n4i.jpg" alt="Attack on Titan (2013)">
+            <div class="review-box">
+                <p class="show-title">Attack on Titan (2013)</p>
+                <p class="review-text">Definition of EPIC</p>
         </div>
 
         <div class="tier Amazing">
             <h2>Amazing</h2>
             <img src="https://m.media-amazon.com/images/M/MV5BMTExNzk2NjcxNTNeQTJeQWpwZ15BbWU4MDcxOTczOTIx._V1_FMjpg_UX1000_.jpg" alt="Twin Peaks (1990)">
             <div class="review-box">
+                <p class="show-title">Twin Peaks (1990)</p>
                 <p class="review-text">Twin Peaks is a surreal, genre-defying series that blends mystery, horror, and the supernatural. It's a cult classic that redefined TV storytelling.</p>
             </div>
             <img src="https://m.media-amazon.com/images/M/MV5BYmM4MjBkNGMtZjE5Zi00ZDMwLWE5MjYtN2M0MTM2YTQ2MmNlXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_FMjpg_UX1000_.jpg" alt="The Bear (2022)">
             <div class="review-box">
+                <p class="show-title">The Bear (2022)</p>
                 <p class="review-text">The Bear is a fresh, intense drama that explores the world of high-pressure kitchens with a raw, unfiltered look at the lives of its characters.</p>
             </div>
             <img src="https://m.media-amazon.com/images/M/MV5BOWFjODRhMDktMTE3My00ODQzLThmODctYmM2ZmU5YmY0ZGVkXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_FMjpg_UX1000_.jpg" alt="The Marvelous Mrs. Maisel (2017)">
             <div class="review-box">
+                 <p class="show-title">The Marvelous Mrs. Maisel (2017)</p>
                 <p class="review-text">Mrs. Maisel will always be in my heart</p>
             </div>
             <img src="https://media.themoviedb.org/t/p/w440_and_h660_face/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg" alt="Game of Thrones (2011)">
@@ -170,7 +193,7 @@
 
         <!-- Add more tiers as needed -->
          <div class="tier Ok">
-            <h2>Ok</h2>
+            <h2>OK(I know i don't do some of them justice)</h2>
             <img src="https://m.media-amazon.com/images/M/MV5BMjQyOTgxMDI0Nl5BMl5BanBnXkFtZTgwOTE4MzczOTE@._V1_FMjpg_UX1000_.jpg" alt="The Night Of (2016)">
             <img src="https://m.media-amazon.com/images/M/MV5BZjI4NmRiNGQtNTg2OS00OTNkLWE4MDMtYjA5NDhiMGVjZmIxXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg" alt="Hacks (2021)">
             <img src="https://m.media-amazon.com/images/M/MV5BNGU2OGJkZTItYmRmNi00YTI2LWFkNzEtNjY2MGZiZTRhMzRkXkEyXkFqcGdeQXVyMjYwNDA2MDE@._V1_FMjpg_UX1000_.jpg" alt="Don't F*ck with Cats (2019)">
